@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <a id="btn-inicio" href="index3.html" title="Voltar ao início">
+        <i class="fas fa-home"></i>
+    </a>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <div style="text-align: center; font-size: 20px; margin-top: 10px;">
+        <p id="data-atual"></p>
+
+        <div class="clock">
+            <p id="horario"></p>    
+            <h1>Notícias da HORA!</h1>
+        </div>
+        <div id="feed-noticias">
+            <h2>Últimas Notícias</h2>
+            <ul id="noticias-lista"></ul>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top">↑</button>
+        <i class="fas fa-arrow-up"></i>
+            <script>
+                // Obter a data atual
+                const dataAtual = new Date();
+               const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
+               const dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoes);
+       
+               // Exibir a data no elemento HTML
+               document.getElementById('data-atual').textContent = `Data: ${dataFormatada}`;
+               
+               // Atualiza o horário na tela
+               function atualizarHorario() {
+                   const agora = new Date();
+                   
+                   // Obtém horas, minutos e segundos
+                   const horas = String(agora.getHours()).padStart(2, '0');
+                   const minutos = String(agora.getMinutes()).padStart(2, '0');
+                   const segundos = String(agora.getSeconds()).padStart(2, '0');
+                   
+                   // Formata o horário
+                   const horarioFormatado = `${horas}:${minutos}:${segundos}`;
+                   
+                   // Atualiza o conteúdo do elemento HTML
+                   document.querySelector('#horario').textContent = `Horário Atual: ${horarioFormatado}`;
+               }
+       
+               // Atualiza o horário a cada segundo
+               setInterval(atualizarHorario, 1000);
+       
+               // Chamada inicial para exibir imediatamente o horário
+               atualizarHorario();
+           </script>
+           <div id="cotacao-dolar" style="font-size: 20px; font-weight: bold; margin: 20px;">
+            Cotação do dólar: <span id="valor-dolar">Carregando...</span>
+        </div>    
+</body>
+</html>

@@ -1,0 +1,264 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5; /* Fundo claro */
+}
+
+/* Estilo do título principal */
+h1 {
+    background-color: #1e90ff; /* Azul vibrante */
+    color: #ffffff; /* Branco */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra do título */
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    color: #1e90ff;
+    margin: 20px auto 10px;
+    padding: 10px;
+    font-size: 1.8rem;
+    border-left: 4px solid #1e90ff;
+    padding-left: 10px;
+}
+
+/* Estilo dos parágrafos */
+p {
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* Links estilizados */
+a {
+    display: flex; 
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1e90ff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeitos ao passar o mouse nos links */
+a:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+/* Container principal */
+body > * {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #ffffff; /* Fundo branco para o conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Menu lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -270px; /* Fora da tela inicialmente */
+    width: 200px;
+    height: 100%; /* Altura completa */
+    background-color: transparent; /* Fundo escuro */
+    color: white;
+    padding: 65px 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: left 0.3s ease; /* Transição suave */
+    z-index: 1000;
+}
+
+/* Links do menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+.menu ul li {
+    margin: 15px 0;
+}
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.menu ul li a:hover {
+    background-color: #444; /* Cor de destaque ao passar o mouse */
+}
+
+/* Menu ativo */
+.menu.active {
+    left: 0; /* Mostra o menu */
+}
+
+/* Botão para abrir/fechar */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+.toggle-btn:hover {
+    background-color: #FFC107;
+}
+
+/* Ajuste do conteúdo principal */
+body.menu-open {
+    margin-left: 200px; /* Move o conteúdo principal para o lado */
+    transition: margin-left 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu ul li {
+        margin: 5px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 8px
+    }
+}
+
+figcaption {
+    font-size: 17px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Inicialmente escondido */
+    visibility: hidden; /* Evitar clique quando invisível */
+    z-index: 1000;
+}
+
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Efeito hover */
+.scroll-to-top:hover {
+    background-color: #FFC107;
+}
+.weatherwidget-io{
+    display: flex;
+    position: relative;
+    left: 510px;
+    width: 150px;
+    height: 500px;
+    top: -2750px;
+}
+#cotacao-dolar {
+    display: flex;
+    position: relative;
+    width: 250px;
+    top: -3810px;
+    left: 1070px;
+    background-color: transparent;
+    box-shadow: none;
+    color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* Estilo da barra de pesquisa */
+#barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#input-pesquisa {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Bordas arredondadas à esquerda */
+    outline: none;
+}
+
+#input-pesquisa:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Destaque ao focar */
+}
+
+#botao-pesquisa {
+    background-color: #5f5f5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0; /* Bordas arredondadas à direita */
+    transition: background-color 0.3s ease;
+}
+
+#botao-pesquisa:hover {
+    background-color: #0056b3;
+}
+/* Ajusta o tamanho do ícone dentro do botão */
+#botao-pesquisa i {
+    font-size: 18px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+}
+

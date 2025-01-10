@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5; /* Fundo claro */
+}
+
+/* Estilo do título principal */
+h1 {
+    background-color: #1e90ff; /* Azul vibrante */
+    color: #ffffff; /* Branco */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra do título */
+}
+#feed-noticias {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#feed-noticias h2 {
+    text-align: center;
+    color: #333;
+}
+
+#noticias-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+#noticias-lista li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#noticias-lista li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#noticias-lista li a:hover {
+    text-decoration: underline;
+}
+
+#noticias-lista p {
+    margin: 5px 0;
+    color: #555;
+}
+#btn-inicio {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Altere para 'right' se preferir */
+    z-index: 100; /* Fica acima de outros elementos */
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+#btn-inicio:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão */
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Inicialmente escondido */
+    visibility: hidden; /* Evitar clique quando invisível */
+    z-index: 1000;
+}
+
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Efeito hover */
+.scroll-to-top:hover {
+    background-color: #FFC107;
+}
+#cotacao-dolar {
+    display: flex;
+    position: relative;
+    width: 250px;
+    top: -3050px;
+    left: 1610px;
+    background-color: transparent;
+    box-shadow: none;
+    color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+}

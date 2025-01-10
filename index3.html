@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de notícias com informações atualizadas sobre política, economia e mais. Confira!">
+    <meta name="keywords" content="notícias, política, economia, esportes, dólar">
+    <meta name="author" content="Pedro">
+    <title>Blog de exemplo</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div style="text-align: center; font-size: 20px; margin-top: 10px;">
+        <p id="data-atual"></p>
+
+        <div class="clock">
+            <p id="horario"></p>
+            <button class="toggle-btn" id="toggle-btn">☰</button>
+            <div class="menu">
+                <ul>
+            <li><a href="index3.html">Início</a></li> 
+            <li><a href="newspages.html" target="_blank">Notícias</a></li>  
+            <li><a href="https://ge.globo.com"target="_blank">Esportes</a></li>  
+            <li><a href="https://economia.uol.com.br/" target="_blank">Economia</a></li>
+            <li><a href="#dicas-para-seu-lar">Dicas</a></li>
+            <li><a href="https://receitas.globo.com/" target="_blank">Culinária</a></li> 
+            <li><a href="loginpage.html" target="_blank">Login</a></li> 
+        </ul>
+            </div>
+    </div>
+    <div id="barra-pesquisa">
+        <input type="text" id="input-pesquisa" placeholder="O que você está procurando?">
+        <button id="botao-pesquisa">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </div>
+    
+
+    <script>
+         // Obter a data atual
+         const dataAtual = new Date();
+        const opcoes = { day: 'numeric', month: 'long', year: 'numeric' };
+        const dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoes);
+
+        // Exibir a data no elemento HTML
+        document.getElementById('data-atual').textContent = `Data: ${dataFormatada}`;
+        
+        // Atualiza o horário na tela
+        function atualizarHorario() {
+            const agora = new Date();
+            
+            // Obtém horas, minutos e segundos
+            const horas = String(agora.getHours()).padStart(2, '0');
+            const minutos = String(agora.getMinutes()).padStart(2, '0');
+            const segundos = String(agora.getSeconds()).padStart(2, '0');
+            
+            // Formata o horário
+            const horarioFormatado = `${horas}:${minutos}:${segundos}`;
+            
+            // Atualiza o conteúdo do elemento HTML
+            document.querySelector('#horario').textContent = `Horário Atual: ${horarioFormatado}`;
+        }
+
+        // Atualiza o horário a cada segundo
+        setInterval(atualizarHorario, 1000);
+
+        // Chamada inicial para exibir imediatamente o horário
+        atualizarHorario();
+    </script>
+    <h1>Notícias da HORA!</h1>
+
+    <h2>Grande festa em Paris pela morte do nazista Jean-Marie Le Pen</h2>
+    <div class="noticia">
+        <figure>
+        <img src="https://dl.askingtips.com/getty/tmp/dl.beatsnoop.com-3000-259k8ScMHB.jpg" alt="Jean-Marie Le Pen"  height="500px" width="700px">
+        <figcaption>Crédito: Joel Saget/Getty Images</figcaption>
+        <p>Líder da extrema direita francesa, defensor do legado de Hitler e negacionista do Holocausto, personagem vil de 96 anos deixou de respirar o mesmo ar que a humanidade nesta terça (7)</p><a href="https://revistaforum.com.br/global/2025/1/7/video-grande-festa-em-paris-pela-morte-do-nazista-jean-marie-le-pen-172137.html" target="_blank" rel="external">Confira mais:</a>
+    </figure>  
+    </div>
+    <h2>Agressor usou óculos inteligentes para planejar ação, segundo FBI</h2>
+    <div class="noticia">
+        <figure>
+        <img src="https://s2-g1.glbimg.com/LYBL04bZvLZgCzrBWm-VwnhlDgs=/0x0:6000x4000/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/m/S/DYZYHrQJAl8zRHWSzwoA/000-36rv2tv.jpg" alt="ataque fatal em Nova Orleans" height="500px" width="700px">
+        <figcaption>Crédito: Matthew Hinton/AFP</figcaption>
+    <p>O homem que realizou um ataque em Nova Orleans na manhã de Ano Novo visitou a cidade duas vezes nos últimos meses e usou óculos inteligentes da Meta para filmar a rua e planejar o ataque, disse o agente especial encarregado do FBI, a agência federal de investigações dos Estados Unidos, em Nova Orleans, Lyonel Myrthil, neste domingo (5).</p><a href="https://www.cnnbrasil.com.br/internacional/ataque-de-nova-orleans-agressor-usou-oculos-inteligentes-para-planejar-acao-diz-fbi/#:~:text=O%20homem%20que%20realizou%20um,em%20Nova%20Orleans%2C%20Lyonel%20Myrthil%2C" target="_blank" rel="external">Confira mais:</a> 
+   </figure>
+    </div>
+    <h2>Dólar tem leve alta e fecha a R$ 6,11, após novas falas de Trump sobre tarifas de importação</h2>
+    <div class="noticia">
+        <figure>
+        <img src="https://www.infomoney.com.br/wp-content/uploads/2024/10/2024-10-16T174352Z_1_LYNXMPEK9F0Q0_RTROPTP_4_MICROSOFT-BLACKROCK-AI.jpg?fit=5760%2C3840&quality=50&strip=all" alt="Dolar tem se mantido em alta nos últimos dias"  height="500px" width="700px">
+        <figcaption>Crédito: Jose Luis Gonzalez/Reuters</figcaption>
+    <p>O dólar fechou a quarta-feira perto da estabilidade ante o real, ainda que no exterior o cenário fosse de aversão a ativos de risco após o presidente eleito dos Estados Unidos, Donald Trump, reavivar o medo das tarifas de importação.</p><a href="https://istoedinheiro.com.br/fechamento-mercado-hoje-08-jan-25/" target="_blank" rel="external">Confira mais:</a>
+</figure>
+    </div>
+    </div>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <i class="fas fa-arrow-up"></i>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const menu = document.querySelector('.menu');
+
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+       // Seleciona o botão
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// Adiciona evento de rolagem para exibir/esconder o botão
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) { // Mostra o botão após 200px
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+// Adiciona o evento de clique para rolar ao topo
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Animação suave
+    });
+});
+    </script>
+    <a class="weatherwidget-io" href="https://forecast7.com/pt/n22d91n43d17/rio-de-janeiro/" data-label_1="RIO DE JANEIRO" data-label_2="WEATHER" data-theme="blue-mountains" >RIO DE JANEIRO WEATHER</a>
+    <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    </script>
+    <div id="cotacao-dolar" style="font-size: 20px; font-weight: bold; margin: 20px;">
+        Cotação do dólar: <span id="valor-dolar">Carregando...</span>
+    </div>
+    <item>
+        <title>Notícia de Exemplo</title>
+        <link>https://www.exemplo.com/noticia</link>
+        <description>Descrição da notícia.</description>
+        <enclosure url="https://www.exemplo.com/imagens/noticia.jpg" type="image/jpeg" />
+      </item>
+      
+</body>
+</html>
