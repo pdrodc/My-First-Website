@@ -5,12 +5,12 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5; /* Fundo claro */
+    background-color: #333;
 }
 
 /* Estilo do título principal */
 h1 {
-    background-color: #1e90ff; /* Azul vibrante */
+    background-color: #9b111e; /* Azul vibrante */
     color: #ffffff; /* Branco */
     text-align: center;
     padding: 20px;
@@ -21,11 +21,11 @@ h1 {
 
 /* Estilo dos subtítulos */
 h2 {
-    color: #1e90ff;
+    color: #9b111e;
     margin: 20px auto 10px;
     padding: 10px;
     font-size: 1.8rem;
-    border-left: 4px solid #1e90ff;
+    border-left: 4px solid #9b111e;
     padding-left: 10px;
 }
 
@@ -49,14 +49,14 @@ a {
     font-weight: bold;
     font-size: 1rem;
     color: #fff;
-    background-color: #1e90ff;
+    background-color: #9b111e;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Efeitos ao passar o mouse nos links */
 a:hover {
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #000; /* Azul mais escuro */
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
 
@@ -118,7 +118,7 @@ body > * {
     top: 20px;
     left: 20px;
     z-index: 1100;
-    background-color: #0056b3;
+    background-color: #9b111e;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -211,11 +211,11 @@ figcaption {
     display: flex;
     position: relative;
     width: 250px;
-    top: -3810px;
+    top: -3770px;
     left: 1070px;
     background-color: transparent;
     box-shadow: none;
-    color: #4CAF50;
+    color: #9b111e;
     padding: 10px;
     border-radius: 5px;
 }
@@ -261,4 +261,3 @@ figcaption {
     font-size: 18px; /* Tamanho do ícone */
     color: white; /* Cor do ícone */
 }
-
